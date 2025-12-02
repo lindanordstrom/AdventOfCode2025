@@ -2,21 +2,16 @@
 
 internal static class Program
 {
-    // L50 - 0 - 1
-    // R150 - 50 - 2
-    // L50 - 0 - 3
     private static string[] TestInput => 
         """
-        R50
-        R150
-        R50
+        11-22,95-115,998-1012,1188511880-1188511890,222220-222224,1698522-1698528,446443-446449,38593856-38593862,565653-565659,824824821-824824827,2121212118-2121212124
         """
-            .Split("\n");
-    private static readonly string[] RealInput = InputLoader.Load(1, separator: "\n");
+            .Split(",");
+    private static readonly string[] RealInput = InputLoader.Load(2, separator: ",");
 
     private static void Main(string[] args)
     {
-        Day1.Part1(RealInput);
-        Day1.Part2(RealInput); 
+        Day2.Part1(RealInput);
+        Day2.Part2(RealInput); 
     }
 }
